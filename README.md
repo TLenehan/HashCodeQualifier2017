@@ -1,6 +1,9 @@
 # HashCodeQualifier2017
 Slightly simplified (but working) version of our hashcode soluction rewritten to be far easier to read.  
   
+## Problem
+https://hashcode.withgoogle.com/2017/tasks/hashcode2017_qualification_task.pdf  
+  
 ## Algorithm  
 The general idea behind our solution was to iterate through each cache and check which videos saved the most time if added to that cache based on the number of requests for the video made by endpoints connected to the cache and the current latency that video faced reaching those endpoints. An obvious drawback to this design was that we only iterated through the caches once, starting from the 0th to the last. This could create a case where the perfect solution includes adding video X to cahce Y, but X was already added to cachce Y-1 and now the algorithm doesn't see the same benefit of adding video X to cache Y
   
